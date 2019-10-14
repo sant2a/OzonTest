@@ -1,9 +1,7 @@
 package firstTest;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,6 +12,8 @@ public class FirstTest extends WebDriverSettings {
 
     @Test //Открыть в браузере сайт https://www.ozon.ru/.
     public void firstTest1() {
+
+
         driver.get(url);
         driver.manage().window().setSize(new Dimension(1920, 1080));
     }

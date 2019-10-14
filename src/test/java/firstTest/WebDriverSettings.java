@@ -3,9 +3,12 @@ package firstTest;
 import net.bytebuddy.agent.builder.AgentBuilder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.ReporterConfig;
 import org.testng.annotations.BeforeTest;
 
 import java.util.ArrayList;
@@ -20,7 +23,8 @@ import java.util.Random;
  */
 public class WebDriverSettings {
 
-    public ChromeDriver driver;
+
+    public WebDriver driver;
     /**
      * Поле содержащее ссылку на тетсируемый сайт
      */
@@ -49,7 +53,9 @@ public class WebDriverSettings {
 
     @BeforeTest
     public void setUp() {
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.gecko.driver", "C:\\Users\\sant2a\\IdeaProjects\\firstTest\\geckodriver.exe");
+         driver = new FirefoxDriver();
+
     }
 
     /**
