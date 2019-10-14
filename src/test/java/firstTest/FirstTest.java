@@ -78,10 +78,11 @@ public class FirstTest extends WebDriverSettings {
     }
 
     @Test // Вернуться на страницу "Виниловые пластинки"
-    public void firstTestCart1() {
+    public void firstTestCart1() throws InterruptedException {
         driver.navigate().back();
         driver.navigate().back();
         driver.navigate().back();
+        Thread.sleep(3000);
     }
 
     @Test
